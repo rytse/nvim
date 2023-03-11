@@ -100,6 +100,9 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+" DAP commands
+command DapRepl lua require'dap'.repl.open()
+
 call plug#begin("~/.vim/plugged")
     Plug 'Rigellute/rigel'
     Plug 'mhinz/vim-startify'
@@ -131,3 +134,5 @@ call plug#begin("~/.vim/plugged")
     Plug 'theHamsta/nvim-dap-virtual-text'
     Plug 'mfussenegger/nvim-dap-python'
 call plug#end()
+
+source $HOME/.config/nvim/init.lua.vim
