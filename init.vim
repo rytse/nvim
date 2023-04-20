@@ -112,10 +112,9 @@ call plug#begin("~/.vim/plugged")
     Plug 'vim-airline/vim-airline-themes'
     Plug 'christoomey/vim-tmux-navigator'
 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+    Plug 'wookayin/semshi', { 'do': ':UpdateRemotePlugins' }
 
-    Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'Exafunction/codeium.vim'
 
     Plug 'preservim/nerdcommenter'
