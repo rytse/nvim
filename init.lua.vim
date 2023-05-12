@@ -22,6 +22,7 @@ end, {})
 
 -- GDB b
 vim.api.nvim_create_user_command('DDebugBreakpoint', function()
+    require("dap").toggle_breakpoint()
 end, {})
 
 -- GDB d
@@ -34,6 +35,7 @@ end, {})
 
 -- GDB c
 vim.api.nvim_create_user_command('DDebugContinue', function()
+    require("dap").continue()
 end, {})
 
 -- GDB f
@@ -42,10 +44,12 @@ end, {})
 
 -- GDB s
 vim.api.nvim_create_user_command('DDebugStep', function()
+    require("dap").step_into()
 end, {})
 
 -- GDB n
 vim.api.nvim_create_user_command('DDebugNext', function()
+    require("dap").step_over()
 end, {})
 
 EOF

@@ -115,7 +115,6 @@ call plug#begin("~/.vim/plugged")
     Plug 'wookayin/semshi', { 'do': ':UpdateRemotePlugins' }
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'Exafunction/codeium.vim'
 
     Plug 'preservim/nerdcommenter'
 
