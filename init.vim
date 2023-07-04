@@ -31,6 +31,12 @@ set ttyfast
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" Reformat
+function CocReformat()
+    call CocAction('format')
+endfunction
+nmap <F5> :call CocReformat()<CR>
+
 " Coc keybindings
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -115,15 +121,16 @@ call plug#begin("~/.vim/plugged")
     Plug 'wookayin/semshi', { 'do': ':UpdateRemotePlugins' }
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'nvim-lua/lsp-status.nvim'
 
     Plug 'preservim/nerdcommenter'
-
-    Plug 'yegappan/mru'
+ 
+    " Plug 'yegappan/mru'
     Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
-    Plug 'rust-lang/rust.vim'
+    " Plug 'rust-lang/rust.vim'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -131,6 +138,10 @@ call plug#begin("~/.vim/plugged")
     Plug 'rcarriga/nvim-dap-ui'
     Plug 'theHamsta/nvim-dap-virtual-text'
     Plug 'mfussenegger/nvim-dap-python'
+
+    Plug 'github/copilot.vim'
+
+    Plug 'tpope/vim-fugitive'
 call plug#end()
 
 source $HOME/.config/nvim/init.lua.vim
