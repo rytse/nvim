@@ -34,5 +34,8 @@
         "$HOME/.rustup/**"
     ],
     "rust-analyzer.procMacro.enable": false,
-    "rust-analyzer.procMacro.attributes.enable": false
+    "rust-analyzer.procMacro.attributes.enable": false,
+    "rust-analyzer.diagnostics.experimental.enable": true,
+    "rust-analyzer.cachePriming.enable": false,
+    "rust-analyzer.checkOnSave": true
 }

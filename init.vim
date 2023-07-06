@@ -121,16 +121,16 @@ call plug#begin("~/.vim/plugged")
     Plug 'wookayin/semshi', { 'do': ':UpdateRemotePlugins' }
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/lsp-status.nvim'
 
     Plug 'preservim/nerdcommenter'
  
-    " Plug 'yegappan/mru'
     Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
-    " Plug 'rust-lang/rust.vim'
+    Plug 'simrat39/rust-tools.nvim'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -138,6 +138,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'rcarriga/nvim-dap-ui'
     Plug 'theHamsta/nvim-dap-virtual-text'
     Plug 'mfussenegger/nvim-dap-python'
+    Plug 'nvim-lua/plenary.nvim'
 
     Plug 'github/copilot.vim'
 
