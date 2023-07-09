@@ -1,41 +1,50 @@
 {
-    "diagnostic-languageserver.formatFiletypes": {
-        "python": [
-            "black",
-            "isort",
-            "docformatter"
-        ]
-    },
-    "diagnostic-languageserver.formatters": {
-        "black": {
-            "command": "black",
-            "args": [
-                "-q",
-                "-"
-            ]
-        },
-        "isort": {
-            "command": "isort",
-            "args": [
-                "-q",
-                "-"
-            ]
-        },
-        "docformatter": {
-            "command": "docformatter",
-            "args": [
-                "-"
-            ]
+    "python.formatting.provider": "black",
+    "languageserver": {
+        "python": {
+            "formatting": {
+                "provider": "black"
+            },
+            "black": {
+                "enabled": true
+            },
+            "diagnostic-languageserver.formatFiletypes": {
+                "python": [
+                    "black",
+                    "isort",
+                    "docformatter"
+                ]
+            },
+            "diagnostic-languageserver.formatters": {
+                "black": {
+                    "command": "black",
+                    "args": [
+                        "-q",
+                        "-"
+                    ]
+                },
+                "isort": {
+                    "command": "isort",
+                    "args": [
+                        "-q",
+                        "-"
+                    ]
+                },
+                "docformatter": {
+                    "command": "docformatter",
+                    "args": [
+                        "-"
+                    ]
+                }
+            },
+            "workspace.ignoredFolders": [
+                "$HOME",
+                "$HOME/.cargo/**",
+                "$HOME/.rustup/**"
+            ],
+            "rust-analyzer.procMacro.enable": false,
+            "rust-analyzer.procMacro.attributes.enable": false,
+            "rust-analyzer.diagnostics.experimental.enable": true,
+            "rust-analyzer.cachePriming.enable": false,
+            "rust-analyzer.checkOnSave": true
         }
-    },
-    "workspace.ignoredFolders": [
-        "$HOME",
-        "$HOME/.cargo/**",
-        "$HOME/.rustup/**"
-    ],
-    "rust-analyzer.procMacro.enable": false,
-    "rust-analyzer.procMacro.attributes.enable": false,
-    "rust-analyzer.diagnostics.experimental.enable": true,
-    "rust-analyzer.cachePriming.enable": false,
-    "rust-analyzer.checkOnSave": true
-}
