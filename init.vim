@@ -37,6 +37,12 @@ function CocReformat()
 endfunction
 nmap <F5> :call CocReformat()<CR>
 
+" Reload Coc rust-analyzer
+function CocRustAnalyzerReload()
+    call CocAction('runCommand', 'rust-analyzer.reloadWorkspace')
+endfunction
+nmap <F6> :call CocRustAnalyzerReload()<CR>
+
 " Coc keybindings
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable

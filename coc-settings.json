@@ -48,3 +48,34 @@
             "rust-analyzer.cachePriming.enable": false,
             "rust-analyzer.checkOnSave": true
         }
+    },
+    "workspace.ignoredFolders": [
+        "$HOME",
+        "$HOME/.cargo/**",
+        "$HOME/.rustup/**"
+    ],
+    "rust-analyzer.procMacro.enable": false,
+    "rust-analyzer.procMacro.attributes.enable": false,
+    "rust-analyzer.diagnostics.experimental.enable": true,
+    "rust-analyzer.cachePriming.enable": false,
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.excludeGlobs": [
+        ".rust_check",
+        ".vscode",
+        ".cargo/**",
+        ".dvc/**",
+        "**/dvc.lock/**",
+        "**.jpg",
+        "**.mp4",
+        "**.kps2",
+        "**/__pycache__/**",
+        "**/Cargo.lock/**",
+        "**/debug/**",
+        "**/release/**",
+        "**/target/**",
+        "data/**",
+        "data2/**",
+        "yocto/**",
+        ".pytest_cache/"
+    ]
+}
