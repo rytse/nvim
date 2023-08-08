@@ -1,7 +1,6 @@
 set encoding=utf-8
 set nobackup
 set nowritebackup
-
 set updatetime=300
 set signcolumn=yes
 
@@ -19,14 +18,12 @@ set autoindent
 set number
 set wildmode=longest,list
 filetype plugin indent on
-syntax on
+syntax enable
 set mouse=a
 set clipboard=unnamedplus
 filetype plugin on
 set cursorline
 set ttyfast
-" set spell
-" set backupdir=~/.cache/vim
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -42,6 +39,9 @@ function CocRustAnalyzerReload()
     call CocAction('runCommand', 'rust-analyzer.reloadWorkspace')
 endfunction
 nmap <F6> :call CocRustAnalyzerReload()<CR>
+
+" Reload open files that may have changed since last edit
+nnoremap <F7> :checktime<CR>
 
 " Coc keybindings
 " Use tab for trigger completion with characters ahead and navigate
@@ -118,13 +118,18 @@ command DapRepl lua require'dap'.repl.open()
 call plug#begin("~/.vim/plugged")
     Plug 'Rigellute/rigel'
     Plug 'mhinz/vim-startify'
-    Plug 'preservim/nerdtree'
+
     Plug 'preservim/tagbar'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'christoomey/vim-tmux-navigator'
 
+    Plug 'preservim/nerdtree'
+    Plug 'ryanoasis/vim-devicons'
+
     Plug 'wookayin/semshi', { 'do': ':UpdateRemotePlugins' }
+    Plug 'rust-lang/rust.vim'
+    Plug 'sheerun/vim-polyglot'
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nvim-lua/lsp-status.nvim'
@@ -146,6 +151,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'github/copilot.vim'
 
     Plug 'tpope/vim-fugitive'
+    Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 source $HOME/.config/nvim/init.lua.vim
