@@ -40,7 +40,6 @@ function lsp_keymap(bufnr)
 
 	-- Diagnostics
 	vim.keymap.set('n', 'ge', vim.diagnostic.open_float, bufopts)
-	vim.keymap.set('n', 'gE', vim.diagnostic.setloclist, bufopts)
 	vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, bufopts)
 	vim.keymap.set('n', ']d', vim.diagnostic.goto_next, bufopts)
 

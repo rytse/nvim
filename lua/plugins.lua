@@ -29,6 +29,17 @@ return require('packer').startup(function(use)
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
 
+  -- Trouble
+  use {
+    'folke/trouble.nvim',
+    requires = 'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    config = function()
+      require("trouble").setup {}
+    end,
+    cmd = { "TroubleToggle", "Trouble" },
+    keys = {},
+  }
+
   -- Status bar
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
   use {
