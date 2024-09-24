@@ -21,6 +21,14 @@ vim.api.nvim_create_autocmd("User", {
   callback = require("lualine").refresh,
 })
 
+-- Syntax highlighting with treesitter
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "python", "rust", "c", "cpp" }, 
+  highlight = {
+    enable = true,
+  },
+}
+
 -- LSP settings. Must be called on_attach for each language server.
 local lspconfig = require'lspconfig'
 local completion_capabilities = require('cmp_nvim_lsp').default_capabilities()

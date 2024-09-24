@@ -23,11 +23,18 @@ return require('packer').startup(function(use)
   use 'preservim/nerdtree'
   use 'folke/tokyonight.nvim'
   use 'tpope/vim-fugitive'
+  use 'alexghergh/nvim-tmux-navigation'
 
   -- Search
   use 'duane9/nvim-rg'
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
+
+  -- TreeSitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- Trouble
   use {
